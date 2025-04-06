@@ -16,7 +16,7 @@ export default function Home() {
     e.preventDefault();
     const interestsArray = interests.trim() === '' ? ["popular tourist spots", "basic plan"] : interests.split(',');
 
-    if (days < 1 || days > 10) {
+    if (days < 2 || days > 10) {
       setDaysError(true);
       return;
     }
@@ -110,7 +110,7 @@ export default function Home() {
           <div>
             <input
               type="number"
-              placeholder="Days (1-10)"
+              placeholder="Days (2-10)"
               value={days}
               onChange={handleDaysChange}
               className={`w-full px-4 py-2 border rounded-lg shadow-sm text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500 ${daysError ? 'border-red-500' : 'border-gray-300'}`}
